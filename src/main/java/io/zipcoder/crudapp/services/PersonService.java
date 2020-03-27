@@ -2,11 +2,13 @@ package io.zipcoder.crudapp.services;
 
 import io.zipcoder.crudapp.Repository.PersonRepository;
 import io.zipcoder.crudapp.models.Person;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class PersonService {
 
+    @Autowired
     private PersonRepository personRepository;
 
     public PersonService(PersonRepository personRepository){

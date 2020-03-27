@@ -10,15 +10,15 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class PersonController {
 
+    @Autowired
     private PersonService personService;
 
-    @Autowired
     public PersonController(PersonService personService){
         this.personService = personService;
     }
 
     @GetMapping("/people/")
-    public ResponseEntity<Iterable<Person>> show(){
+    public ResponseEntity<Iterable<Person>> showAll(){
         return new ResponseEntity<>(personService.getPersonList(), HttpStatus.OK);
     }
 

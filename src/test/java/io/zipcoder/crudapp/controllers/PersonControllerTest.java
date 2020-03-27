@@ -28,7 +28,7 @@ public class PersonControllerTest {
 
     @Test
     public void testCreatePerson() throws Exception {
-        Person person = new Person("Moe", "Aydin", 1);
+        Person person = new Person("Moe", "Aydin");
 
         BDDMockito
                 .given(repository.save(person))
