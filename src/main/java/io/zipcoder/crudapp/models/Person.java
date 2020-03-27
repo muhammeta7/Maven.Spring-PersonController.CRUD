@@ -8,8 +8,9 @@ import javax.persistence.Id;
 @Entity
 public class Person {
 
-    @Id @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     private String firstName;
     private String lastName;
 
@@ -21,13 +22,13 @@ public class Person {
         this.lastName = last;
     }
 
-    public Person(String first, String last, Integer id){
+    public Person(String first, String last, Long id){
         this.id = id;
         this.firstName = first;
         this.lastName = last;
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 

@@ -10,9 +10,10 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class PersonController {
 
-    @Autowired
+
     private PersonService personService;
 
+    @Autowired
     public PersonController(PersonService personService){
         this.personService = personService;
     }
@@ -23,7 +24,7 @@ public class PersonController {
     }
 
     @GetMapping("/people/{id}")
-    public ResponseEntity<Person> showAll(@PathVariable Long id){
+    public ResponseEntity<Person> getPersonById(@PathVariable Long id){
         return new ResponseEntity<>((personService.getPerson(id)), HttpStatus.OK);
     }
 
