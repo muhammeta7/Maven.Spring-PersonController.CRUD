@@ -3,7 +3,7 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 
 
-.mvnw
+.mvn
 mvnw
 mvnw.cmd
 ### STS ###
